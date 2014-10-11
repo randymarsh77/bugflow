@@ -1,0 +1,72 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+body
+{
+	width:250px;
+}
+
+input[name="service"], input[name="username"], input[type="password"]
+{
+	width:86%;
+	height:12px;
+	background:#fff;
+	margin-bottom:4%;
+	border:1px solid #ccc;
+	padding:7%;
+	font-size:120%;
+	color:#555;
+}
+
+button[name="setservice"], button[name="login"]
+{
+	width:100%;
+	background:#3399cc;
+	border:0;
+	padding:4%;
+	font-family:'Open Sans',sans-serif;
+	font-size:110%;
+	color:#fff;
+	cursor:pointer;
+	transition:background .3s;
+	-webkit-transition:background .3s;
+}
+
+button[name="setservice"]:hover, button[name="login"]:hover
+{
+	background:#2288bb;
+}
+
+div[name="servicedata"]
+{
+	margin-bottom: 4%;
+}
+
+span[name="serviceurl"]
+{
+	font-family:'Open Sans',sans-serif;
+	color: #95a5a6;
+}
+
+span[name="changeservice"]
+{
+	font-family:'Open Sans',sans-serif;
+	position: absolute;
+    right: 4px;
+    color: #3498db;
+}
+
+span[name="changeservice"]:hover
+{
+	color: ##2980b9;
+	cursor: pointer;
+}
+
+span[name="usernamestring"]
+{
+	font-family:'Open Sans',sans-serif;
+	font-size: 120%;
+	font-weight: bold;
+	color:#2c3e50;
+	margin-left: auto;
+	margin-right: auto;
+}

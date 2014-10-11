@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="styles/popup.css" rel="stylesheet">
+		<script data-main="scripts/popup.js" src="scripts/require.js"></script>
+	</head>
+	<body ng-app="bugflowpopup" ng-controller="UserController as user">
+		<div ng-show="!hasUrl && !isAuthenticated">
+			<input name="service" type="text" ng-model="user.fogbugzurl" placeholder="https://fogbugz.example.com" />
+			<button name="setservice" ng-click="user.setServiceUrl()">Use FogBugz Server</button>
+		</div>
+		<div ng-show="hasUrl && !isAuthenticated">
+			<div name="servicedata">
+				<span name="serviceurl" ng-bind="fogBugzUrl"></span>
+				<span name="changeservice" ng-click="user.changeServiceUrl()">Change</span>
+			</div>
+			<input name="username" ng-model="user.username" placeholder="username" />
+			<input type="password" ng-model="user.password" placeholder="password" />
+			<button name="login" ng-click="user.login()" >Log in</button>
+		</div>
+		<div ng-show="isAuthenticated">
+			<span name="usernamestring">Showing bugz for {{userFullName}}</span>
+			<div name="servicedata">
+				<span name="serviceurl" ng-bind="fogBugzUrl"></span>
+				<span name="changeservice" ng-click="user.changeServiceUrl()">Change</span>
+			</div>
+			<div name="prefs">
+			<label class="checkbox">
+				<input type="checkbox" ng-model="user.inline" ng-change="user.updatePreferences()">
+				Display inline case data
+			</label>
+			</div>
+		</div>
+	</body>
+</html>
