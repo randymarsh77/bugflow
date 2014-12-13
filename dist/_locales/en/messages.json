@@ -4,7 +4,7 @@
     "description": "The name of the application"
   },
   "appDescription": {
-    "message": "Fogbugz integration into FlowDock",
+    "message": "FogBugz integration into Flowdock",
     "description": "The description of the application"
   }
 }

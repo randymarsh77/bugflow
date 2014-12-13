@@ -5,7 +5,7 @@ Chrome extension that detects FogBugz case links in Flowdock chat messages and a
 
 ###Download
 
-[Version 1.0](https://github.com/randymarsh77/bugflow/blob/master/package/bugflow-1.0.crx?raw=true)
+[Version 1.0.1](https://chrome.google.com/webstore/detail/bugflow/ebfhmckighndcjlkaeagbhognmnbdmia)
 
 ###Features
 
