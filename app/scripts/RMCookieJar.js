@@ -174,6 +174,7 @@ define([], function()
 			if (x === c_name)
 				return unescape(y);
 		}
+		return null;
 	};
 
 	return {

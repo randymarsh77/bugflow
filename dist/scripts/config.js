@@ -162,12 +162,12 @@ define(['RMCookieJar', 'preferences'], function(CookieJar, Preferences)
 
 		config.cookieJar.GetCookie(this.flowDockCookieURL, cookieName, function(value)
 			{
-				config.SetPreferences(Preferences.CreateFromDTO(JSON.parse(value)));
+				config.SetPreferences(value !== null ? Preferences.CreateFromDTO(JSON.parse(value)) : Preferences.Create());
 			});
 
 		this.preferencesCookieListener = config.cookieJar.AddCookieListener(this.flowDockCookieURL, cookieName, function(changeInfo)
 			{
-				config.SetPreferences(changeInfo.removed ? null : Preferences.CreateFromDTO(JSON.parse(changeInfo.cookie.value)));
+				config.SetPreferences(changeInfo.removed ? Preferences.Create() : Preferences.CreateFromDTO(JSON.parse(changeInfo.cookie.value)));
 			});
 	};
 
